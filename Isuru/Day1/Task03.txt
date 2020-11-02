@@ -1,0 +1,38 @@
+$ docker run -d devopsdockeruh/exec_bash_exercise
+Unable to find image 'devopsdockeruh/exec_bash_exercise:latest' locally
+latest: Pulling from devopsdockeruh/exec_bash_exercise
+1c6172af85ee: Pull complete
+b194b0e3c928: Pull complete
+1f5ec00f35d5: Pull complete
+93b1353672b6: Pull complete
+3d7f38db3cca: Pull complete
+21e102f9fe89: Pull complete
+d851ffed797c: Pull complete
+a45031e28c68: Pull complete
+ca3c1414856f: Pull complete
+02c74c9936fd: Pull complete
+ddb55f8ab0a8: Pull complete
+Digest: sha256:d38b6f6b0eed2880e25c9eb7f83f1cd016ffe3a56c9a3fec6e7bee480bf1ed0f
+Status: Downloaded newer image for devopsdockeruh/exec_bash_exercise:latest
+$ docker ps
+CONTAINER ID        IMAGE                               COMMAND                  CREATED             STATUS              PORTS               NAMES
+f53c658474f1        devopsdockeruh/exec_bash_exercise   "docker-entrypoint.s…"   27 seconds ago      Up 25 seconds                 cranky_mendeleev
+$ docker exec -ti f53c658474f1d2da6ced81f931ae23e694ab181f6ed145fec88a9101a0bd6181 bash
+root@f53c658474f1:/usr/app# tail -f ./logs.txt
+Secret message is:
+"Docker is easy"
+Mon, 02 Nov 2020 14:32:10 GMT
+Mon, 02 Nov 2020 14:32:13 GMT
+Mon, 02 Nov 2020 14:32:16 GMT
+Mon, 02 Nov 2020 14:32:19 GMT
+Secret message is:
+"Docker is easy"
+Mon, 02 Nov 2020 14:32:25 GMT
+Mon, 02 Nov 2020 14:32:28 GMT
+Mon, 02 Nov 2020 14:32:31 GMT
+Mon, 02 Nov 2020 14:32:34 GMT
+Secret message is:
+"Docker is easy"
+Mon, 02 Nov 2020 14:32:40 GMT
+Mon, 02 Nov 2020 14:32:43 GMT
+Mon, 02 Nov 2020 14:32:46 GMT
