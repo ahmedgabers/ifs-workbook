@@ -1,0 +1,45 @@
+D:\x300n>docker run -d --name ng1 nginx
+04d7187015118b52bad2c6d8798769fd0778ed4a1950ce6e99ffe47859114598
+
+D:\x300n>docker run -d --name ng2 nginx
+4804537aef7dcad78cdea3efe92366ff87bfecaa6cb49349bcec039b76f1801b
+
+D:\x300n>docker run -d --name ng3 nginx
+86272dc80fa8769091d922ad3200452e419cf65d75c5ce8736f0a7dbb095bf95
+
+D:\x300n>docker stop ng1
+ng1
+
+D:\x300n>docker stop ng2
+ng2
+
+D:\x300n>docker start ng1
+ng1
+
+D:\x300n>docker run -d --name clk ahmedgabercod/clock
+e6cc84b1e8c23b4ef0c34e4d9f219fcb923b63193935bff9d5150065cb68cd64
+
+D:\x300n>docker attach clk
+Mon Nov  2 12:48:52 UTC 2020
+Mon Nov  2 12:48:53 UTC 2020
+Mon Nov  2 12:48:54 UTC 2020
+Mon Nov  2 12:48:55 UTC 2020
+Mon Nov  2 12:48:56 UTC 2020
+Mon Nov  2 12:48:57 UTC 2020
+Mon Nov  2 12:48:58 UTC 2020
+Mon Nov  2 12:48:59 UTC 2020
+Mon Nov  2 12:49:00 UTC 2020
+Mon Nov  2 12:49:01 UTC 2020
+Mon Nov  2 12:49:02 UTC 2020
+Mon Nov  2 12:49:03 UTC 2020
+Mon Nov  2 12:49:04 UTC 2020
+Mon Nov  2 12:49:05 UTC 2020
+Mon Nov  2 12:49:06 UTC 2020
+
+D:\x300n>docker ps
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS               NAMES
+e6cc84b1e8c2        ahmedgabercod/clock   "/bin/sh -c 'while d…"   26 seconds ago      Up 24 seconds                           clk
+86272dc80fa8        nginx                 "nginx -g 'daemon of…"   2 minutes ago       Up About a minute   80/tcp              ng3
+04d718701511        nginx                 "nginx -g 'daemon of…"   2 minutes ago       Up 54 seconds       80/tcp              ng1
+
+D:\x300n>

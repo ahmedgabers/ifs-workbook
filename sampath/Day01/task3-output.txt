@@ -1,0 +1,15 @@
+$ docker exec 9711 tail -f ./logs.txt
+Mon, 02 Nov 2020 16:04:59 GMT
+Mon, 02 Nov 2020 16:05:02 GMT
+Mon, 02 Nov 2020 16:05:05 GMT
+Mon, 02 Nov 2020 16:05:08 GMT
+Secret message is:
+"Docker is easy"
+Mon, 02 Nov 2020 16:05:14 GMT
+Mon, 02 Nov 2020 16:05:17 GMT
+Mon, 02 Nov 2020 16:05:20 GMT
+Mon, 02 Nov 2020 16:05:23 GMT
+Secret message is:
+"Docker is easy"
+Mon, 02 Nov 2020 16:05:29 GMT
+Mon, 02 Nov 2020 16:05:32 GMT

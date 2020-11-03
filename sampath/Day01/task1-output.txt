@@ -1,0 +1,67 @@
+Your Interactive Bash Terminal.
+
+$ docker run -it ubunutu
+Unable to find image 'ubunutu:latest' locally
+docker: Error response from daemon: pull access denied for ubunutu, repository does not exist or may require 'docker login'.
+See 'docker run --help'.
+$ docker run -it ubuntu
+root@33ecc6de8b98:/# figlet hello
+bash: figlet: command not found
+root@33ecc6de8b98:/# apt-get update
+Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]
+Get:2 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [111 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [98.3 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [85.3 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [1170 B]
+Get:7 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [639 kB]
+Get:8 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [438 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1275 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [857 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [107 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [808 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [21.6 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [4277 B]
+Fetched 16.4 MB in 1s (11.0 MB/s)
+Reading package lists... Done
+root@33ecc6de8b98:/# apt-get  install figlet
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following NEW packages will be installed:
+  figlet
+0 upgraded, 1 newly installed, 0 to remove and 27 not upgraded.
+Need to get 133 kB of archives.
+After this operation, 752 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal/universe amd64 figlet amd64 2.2.5-3 [133 kB]
+Fetched 133 kB in 0s (1116 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package figlet.
+(Reading database ... 4122 files and directories currently installed.)
+Preparing to unpack .../figlet_2.2.5-3_amd64.deb ...
+Unpacking figlet (2.2.5-3) ...
+Setting up figlet (2.2.5-3) ...
+update-alternatives: using /usr/bin/figlet-figlet to provide /usr/bin/figlet (figlet) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man6/figlet.6.gz because associated file /usr/share/man/man6/figlet-figlet.6.gz (of link group figlet) doesn't exist
+root@33ecc6de8b98:/# figlet Sampath
+ ____                              _   _
+/ ___|  __ _ _ __ ___  _ __   __ _| |_| |__
+\___ \ / _` | '_ ` _ \| '_ \ / _` | __| '_ \
+ ___) | (_| | | | | | | |_) | (_| | |_| | | |
+|____/ \__,_|_| |_| |_| .__/ \__,_|\__|_| |_|
+                      |_|
+root@33ecc6de8b98:/# dpkg -l | wc -l
+98
+root@33ecc6de8b98:/# exit
+exit
+$ docker run -ti ubuntu
+root@43aeeb794647:/# dpkg -l | wc -l
+97
+root@43aeeb794647:/# figlet
+bash: figlet: command not found
+root@43aeeb794647:/# exit
+exit
+$
