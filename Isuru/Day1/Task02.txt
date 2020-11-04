@@ -1,0 +1,58 @@
+$ docker run -d nginx
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+bb79b6b2107f: Pull complete
+111447d5894d: Pull complete
+a95689b8e6cb: Pull complete
+1a0022e444c2: Pull complete
+32b7488a3833: Pull complete
+Digest: sha256:ed7f815851b5299f616220a63edac69a4cc200e7f536a56e421988da82e44ed8
+Status: Downloaded newer image for nginx:latest
+6de8cf86cc1c38151881fddac04a1237626591c6612a4256b80f6dcc67457b24
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS NAMES
+6de8cf86cc1c        nginx               "/docker-entrypoint.…"   31 seconds ago      Up 22 seconds       80/tcp pensive_hamilton
+$ docker stop 6de8cf86cc1c
+6de8cf86cc1c
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS                      PORTS          NAMES
+6de8cf86cc1c        nginx               "/docker-entrypoint.…"   About a minute ago   Exited (0) 38 seconds ago          pensive_hamilton
+$ docker start 6de8cf86cc1c
+6de8cf86cc1c
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS NAMES
+6de8cf86cc1c        nginx               "/docker-entrypoint.…"   2 minutes ago       Up 8 seconds        80/tcp pensive_hamilton
+$ docker run -d ahmedgabercod/clock
+Unable to find image 'ahmedgabercod/clock:latest' locally
+latest: Pulling from ahmedgabercod/clock
+0f8c40e1270f: Pull complete
+Digest: sha256:ace75dda37174abb563799a8b9b2043505619559fe1120a26a63363dc48bcd26
+Status: Downloaded newer image for ahmedgabercod/clock:latest
+d62f40c5f095c47f9d18d1fa61c170e6f4132e5e9d29ea808411ce6f88b3e5e2
+$ docker ps
+CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS   NAMES
+d62f40c5f095        ahmedgabercod/clock   "/bin/sh -c 'while d…"   43 seconds ago      Up 38 seconds   clever_shannon
+6de8cf86cc1c        nginx                 "/docker-entrypoint.…"   4 minutes ago       Up About a minute   80/tcp   pensive_hamilton
+$ docker attach d62f40c5f095
+Mon Nov  2 12:52:08 UTC 2020
+Mon Nov  2 12:52:09 UTC 2020
+Mon Nov  2 12:52:10 UTC 2020
+Mon Nov  2 12:52:11 UTC 2020
+Mon Nov  2 12:52:12 UTC 2020
+Mon Nov  2 12:52:13 UTC 2020
+Mon Nov  2 12:52:14 UTC 2020
+Mon Nov  2 12:52:15 UTC 2020
+Mon Nov  2 12:52:16 UTC 2020
+Mon Nov  2 12:52:17 UTC 2020
+Mon Nov  2 12:52:18 UTC 2020
+Mon Nov  2 12:52:19 UTC 2020
+Mon Nov  2 12:52:20 UTC 2020
+Mon Nov  2 12:52:21 UTC 2020
+Mon Nov  2 12:52:22 UTC 2020
+Mon Nov  2 12:52:23 UTC 2020
+Mon Nov  2 12:52:24 UTC 2020
+Mon Nov  2 12:52:25 UTC 2020
+Mon Nov  2 12:52:26 UTC 2020
+^C$
