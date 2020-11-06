@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: clockme
+  name: clockme
+spec:
+  containers:
+  - image: ahmedgabercod/clock
+    name: clockme
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

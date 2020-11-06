@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: football
+  name: football
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: football
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: football
+    spec:
+      containers:
+      - image: ahmedgabercod/ping
+        name: ping
+        resources: {}
+status: {}

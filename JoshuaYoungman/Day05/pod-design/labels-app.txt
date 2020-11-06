@@ -1,0 +1,12 @@
+NAME       READY   STATUS                  RESTARTS   AGE     APP
+busybox    0/1     CrashLoopBackOff        25         105m    
+busybox2   0/1     Completed               0          96m     
+busybox3   0/1     CrashLoopBackOff        23         94m     
+busybox4   0/1     CrashLoopBackOff        21         84m     
+nginx1     1/1     Running                 0          4m41s   v1
+nginx2     1/1     Running                 0          4m25s   v2
+nginx3     1/1     Running                 0          4m22s   v1
+nginx4     1/1     Running                 0          108m    
+nginx5     1/1     Running                 0          101m    
+nginx6     1/1     Running                 0          91m     
+nginx7     0/1     Init:CrashLoopBackOff   18         72m     
