@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2020-11-06T12:25:54Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:phase: {}
+    manager: kubectl-create
+    operation: Update
+    time: "2020-11-06T12:25:54Z"
+  name: myns
+  selfLink: /api/v1/namespaces/myns
+  uid: beead52f-01ab-4d07-b26c-6ed9bfea467f
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
